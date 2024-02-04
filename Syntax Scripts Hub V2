@@ -9,7 +9,7 @@ local Tab = Window:MakeTab({
 
 OrionLib:MakeNotification({
 	Name = "HEY",
-	Content = "Sub To HYxDeath!",
+	Content = "linktr.ee/codeweb.com !",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
