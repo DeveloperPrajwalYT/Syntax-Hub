@@ -1,0 +1,6 @@
+V1 [ OG VERSION | BLOXFRUITS ]:
+loadstring(game:HttpGet"https://raw.githubusercontent.com/DeveloperPrajwalYT/Syntax-Hub/main/Syntax%20Scripts%20Hub")()
+
+
+V2 [ SUGGESTED + LATEST | BLOXFRUITS ]:
+loadstring(game:HttpGet"https://raw.githubusercontent.com/DeveloperPrajwalYT/Syntax-Hub/main/Syntax%20Scripts%20Hub%20V2")()
