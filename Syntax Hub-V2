@@ -12,7 +12,7 @@ _G.Key = "SyntaxKey#8369" -- You Put Your Key Here
 _G.KeyInput = "string"
 
 function MakeScriptHub()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SL-Scripts/HYxDeath-Upd/main/HYxDeath%20Hub"))(); -- You Put Your Script Here
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DeveloperPrajwalYT/Syntax-Hub/main/Syntax%20Scripts%20Hub%20V2"))(); -- You Put Your Script Here
 
 end
 
