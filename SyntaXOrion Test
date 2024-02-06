@@ -1,5 +1,5 @@
--- Load Orion Library
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/OrionTheDev/Orion-Library/main/main.lua"))()
+-- Load Fluent Library
+local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/main/main.lua"))()
 
 -- Define function to teleport to the sea level
 local function teleportToSeaLevel()
@@ -45,15 +45,13 @@ end
 
 -- Main script
 local function main()
-    -- Your initialization code here
-    
     -- Activate Haki
     -- Your Haki activation logic here
     print("Haki activated!")
     
-    -- Check if Orion Library is loaded successfully
-    if OrionLib then
-        print("Orion Library loaded successfully.")
+    -- Check if Fluent Library is loaded successfully
+    if Fluent then
+        print("SyntaXOrion Library loaded successfully.")
         
         -- Create tabs
         local tabs = {
@@ -125,15 +123,15 @@ local function main()
         
         -- Create tabs and add features
         for _, tabData in ipairs(tabs) do
-            local tab = OrionLib.UI:CreateTab(tabData.name)
+            local tab = Fluent:CreateTab(tabData.name)
             for _, featureData in ipairs(tabData.features) do
-                tab:AddButton(featureData[1], featureData[2])
+                tab:CreateButton(featureData[1], featureData[2])
             end
         end
         
         print("SyntaXOrion script executed successfully.")
     else
-        warn("Failed to load Orion Library.")
+        warn("Failed to load SyntaXOrion Library.")
     end
 end
 
