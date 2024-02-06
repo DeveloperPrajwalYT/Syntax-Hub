@@ -55,7 +55,9 @@ local function main()
         
         -- Create tabs
         local tabs = {
+            -- Main tab for general features
             {name = "Main", features = {
+                -- Autofarm feature
                 {"Autofarm", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
@@ -63,6 +65,7 @@ local function main()
                     -- Your autofarm logic here
                     print("Autofarming...")
                 end},
+                -- Autofarm Rip Indra feature
                 {"Autofarm Rip Indra", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
@@ -70,6 +73,7 @@ local function main()
                     -- Your autofarm Rip Indra logic here
                     print("Autofarming Rip Indra...")
                 end},
+                -- Autofarm Dough Prince feature
                 {"Autofarm Dough Prince", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
@@ -77,6 +81,7 @@ local function main()
                     -- Your autofarm Dough Prince logic here
                     print("Autofarming Dough Prince...")
                 end},
+                -- Autofarm Dough King feature
                 {"Autofarm Dough King", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
@@ -85,31 +90,37 @@ local function main()
                     print("Autofarming Dough King...")
                 end}
             }},
+            -- Sea Hunt tab for sea-related features
             {name = "Sea Hunt", features = {
+                -- Farm Seabeast feature
                 {"Farm Seabeast", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
                     -- Farm seabeast
                     farmSeabeast()
                 end},
+                -- Auto Terror Shark feature
                 {"Auto Terror Shark", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
                     -- Auto terror shark
                     autoTerrorShark()
                 end},
+                -- Auto Mirage Hunt feature
                 {"Auto Mirage Hunt", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
                     -- Auto mirage hunt
                     autoMirageHunt()
                 end},
+                -- Auto Leviathan feature
                 {"Auto Leviathan", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
                     -- Auto leviathan
                     autoLeviathan()
                 end},
+                -- Auto Drive Boat feature
                 {"Auto Drive Boat", function()
                     -- Teleport to the sea level
                     teleportToSeaLevel()
@@ -117,7 +128,9 @@ local function main()
                     autoDriveBoat()
                 end}
             }},
+            -- Transportation & aimbot tab for transportation and aiming features
             {name = "Transportation & aimbot", features = {}}, -- Placeholder for features in this tab
+            -- Settings tab for settings features
             {name = "Settings", features = {}} -- Placeholder for features in this tab
         }
         
@@ -131,6 +144,7 @@ local function main()
         
         print("SyntaXOrion script executed successfully.")
     else
+        -- Display a warning if Fluent Library fails to load
         warn("Failed to load SyntaXOrion Library.")
     end
 end
