@@ -1,35 +1,46 @@
 -- Load Orion Library
 local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/OrionTheDev/Orion-Library/main/main.lua"))()
 
--- Define function to activate Haki
-local function activateHaki()
-    -- Activate Haki
-    -- Your Haki activation logic here
-    print("Haki activated!")
+-- Define function to teleport to the sea level
+local function teleportToSeaLevel()
+    -- Teleport to the sea level
+    -- Your teleport logic here
+    print("Teleporting to sea level...")
 end
 
--- Define function to check if a server is small (less than a certain player count)
-local function isSmallServer(server, maxPlayerCount)
-    return server.Players:FindFirstChild("MaxPlayers") and server.Players.MaxPlayers <= maxPlayerCount
+-- Define function to farm seabeast
+local function farmSeabeast()
+    -- Farm seabeast logic
+    -- Your farm seabeast logic here
+    print("Farming Seabeast...")
 end
 
--- Define function to teleport to a small server
-local function teleportToSmallServer(maxPlayerCount)
-    -- Find a small server
-    local smallServer = nil
-    for _, server in ipairs(game:GetService("TeleportService"):GetLocalPlayerTeleportPaging:GetCurrentPage()) do
-        if isSmallServer(server, maxPlayerCount) then
-            smallServer = server
-            break
-        end
-    end
-    -- Teleport to the small server if found
-    if smallServer then
-        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, smallServer.id)
-        print("Teleporting to a small server...")
-    else
-        print("No small server found.")
-    end
+-- Define function for auto terror shark
+local function autoTerrorShark()
+    -- Auto terror shark logic
+    -- Your auto terror shark logic here
+    print("Auto Terror Shark...")
+end
+
+-- Define function for auto mirage hunt
+local function autoMirageHunt()
+    -- Auto mirage hunt logic
+    -- Your auto mirage hunt logic here
+    print("Auto Mirage Hunt...")
+end
+
+-- Define function for auto leviathan
+local function autoLeviathan()
+    -- Auto leviathan logic
+    -- Your auto leviathan logic here
+    print("Auto Leviathan...")
+end
+
+-- Define function for auto drive boat
+local function autoDriveBoat()
+    -- Auto drive boat logic
+    -- Your auto drive boat logic here
+    print("Auto Drive Boat...")
 end
 
 -- Main script
@@ -37,47 +48,88 @@ local function main()
     -- Your initialization code here
     
     -- Activate Haki
-    activateHaki()
+    -- Your Haki activation logic here
+    print("Haki activated!")
     
     -- Check if Orion Library is loaded successfully
     if OrionLib then
         print("Orion Library loaded successfully.")
         
-        -- Create a tab for main features
-        local mainTab = OrionLib.UI:CreateTab("Main")
+        -- Create tabs
+        local tabs = {
+            {name = "Main", features = {
+                {"Autofarm", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Start autofarm
+                    -- Your autofarm logic here
+                    print("Autofarming...")
+                end},
+                {"Autofarm Rip Indra", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Start autofarm Rip Indra
+                    -- Your autofarm Rip Indra logic here
+                    print("Autofarming Rip Indra...")
+                end},
+                {"Autofarm Dough Prince", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Start autofarm Dough Prince
+                    -- Your autofarm Dough Prince logic here
+                    print("Autofarming Dough Prince...")
+                end},
+                {"Autofarm Dough King", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Start autofarm Dough King
+                    -- Your autofarm Dough King logic here
+                    print("Autofarming Dough King...")
+                end}
+            }},
+            {name = "Sea Hunt", features = {
+                {"Farm Seabeast", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Farm seabeast
+                    farmSeabeast()
+                end},
+                {"Auto Terror Shark", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Auto terror shark
+                    autoTerrorShark()
+                end},
+                {"Auto Mirage Hunt", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Auto mirage hunt
+                    autoMirageHunt()
+                end},
+                {"Auto Leviathan", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Auto leviathan
+                    autoLeviathan()
+                end},
+                {"Auto Drive Boat", function()
+                    -- Teleport to the sea level
+                    teleportToSeaLevel()
+                    -- Auto drive boat
+                    autoDriveBoat()
+                end}
+            }},
+            {name = "Transportation & aimbot", features = {}}, -- Placeholder for features in this tab
+            {name = "Settings", features = {}} -- Placeholder for features in this tab
+        }
         
-        -- Create a tab for settings
-        local settingsTab = OrionLib.UI:CreateTab("Settings")
-        
-        -- Add autohaki toggle
-        local autohakiToggle = settingsTab:AddToggle("Autohaki", function(enabled)
-            -- Your autohaki logic here
-            if enabled then
-                activateHaki()
-                print("Autohaki enabled")
-            else
-                print("Autohaki disabled")
+        -- Create tabs and add features
+        for _, tabData in ipairs(tabs) do
+            local tab = OrionLib.UI:CreateTab(tabData.name)
+            for _, featureData in ipairs(tabData.features) do
+                tab:AddButton(featureData[1], featureData[2])
             end
-        end)
-        
-        -- Add teleport to small server feature
-        local teleportSmallServerButton = settingsTab:AddButton("Teleport to Small Server", function()
-            -- Your teleport to small server logic here
-            teleportToSmallServer(10) -- Teleport to a server with less than 10 players
-        end)
-        
-        -- Dropdown menu for changing team
-        local teamDropdown = settingsTab:CreateDropdown("Change Team")
-        teamDropdown:AddOption("Pirate", function()
-            -- Change team to Pirate
-            -- Your change team logic here
-            print("Changed team to Pirate")
-        end)
-        teamDropdown:AddOption("Marine", function()
-            -- Change team to Marine
-            -- Your change team logic here
-            print("Changed team to Marine")
-        end)
+        end
         
         print("SyntaXOrion script executed successfully.")
     else
