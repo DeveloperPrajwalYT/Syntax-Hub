@@ -1,0 +1,89 @@
+-- Load Orion Library
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/OrionTheDev/Orion-Library/main/main.lua"))()
+
+-- Define function to activate Haki
+local function activateHaki()
+    -- Activate Haki
+    -- Your Haki activation logic here
+    print("Haki activated!")
+end
+
+-- Define function to check if a server is small (less than a certain player count)
+local function isSmallServer(server, maxPlayerCount)
+    return server.Players:FindFirstChild("MaxPlayers") and server.Players.MaxPlayers <= maxPlayerCount
+end
+
+-- Define function to teleport to a small server
+local function teleportToSmallServer(maxPlayerCount)
+    -- Find a small server
+    local smallServer = nil
+    for _, server in ipairs(game:GetService("TeleportService"):GetLocalPlayerTeleportPaging:GetCurrentPage()) do
+        if isSmallServer(server, maxPlayerCount) then
+            smallServer = server
+            break
+        end
+    end
+    -- Teleport to the small server if found
+    if smallServer then
+        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, smallServer.id)
+        print("Teleporting to a small server...")
+    else
+        print("No small server found.")
+    end
+end
+
+-- Main script
+local function main()
+    -- Your initialization code here
+    
+    -- Activate Haki
+    activateHaki()
+    
+    -- Check if Orion Library is loaded successfully
+    if OrionLib then
+        print("Orion Library loaded successfully.")
+        
+        -- Create a tab for main features
+        local mainTab = OrionLib.UI:CreateTab("Main")
+        
+        -- Create a tab for settings
+        local settingsTab = OrionLib.UI:CreateTab("Settings")
+        
+        -- Add autohaki toggle
+        local autohakiToggle = settingsTab:AddToggle("Autohaki", function(enabled)
+            -- Your autohaki logic here
+            if enabled then
+                activateHaki()
+                print("Autohaki enabled")
+            else
+                print("Autohaki disabled")
+            end
+        end)
+        
+        -- Add teleport to small server feature
+        local teleportSmallServerButton = settingsTab:AddButton("Teleport to Small Server", function()
+            -- Your teleport to small server logic here
+            teleportToSmallServer(10) -- Teleport to a server with less than 10 players
+        end)
+        
+        -- Dropdown menu for changing team
+        local teamDropdown = settingsTab:CreateDropdown("Change Team")
+        teamDropdown:AddOption("Pirate", function()
+            -- Change team to Pirate
+            -- Your change team logic here
+            print("Changed team to Pirate")
+        end)
+        teamDropdown:AddOption("Marine", function()
+            -- Change team to Marine
+            -- Your change team logic here
+            print("Changed team to Marine")
+        end)
+        
+        print("SyntaXOrion script executed successfully.")
+    else
+        warn("Failed to load Orion Library.")
+    end
+end
+
+-- Execute the main function
+main()
