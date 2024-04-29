@@ -1,0 +1,154 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "DeathXUltimate", HidePremium = false, IntroText = "SyntaXDeath Scripts Hub V1", SaveConfig = true, ConfigFolder = "Scripts"})
+
+local TabBloxFruits = Window:MakeTab({
+    Name = "Blox Fruits",
+    Icon = "https://img.icons8.com/plasticine/2x/fruits.png",
+    PremiumOnly = false
+})
+
+OrionLib:MakeNotification({
+    Name = "HEY",
+    Content = "linktr.ee/codeweb.com !",
+    Image = "rbxassetid://4483345998",
+    Time = 5
+})
+
+local SectionBloxFruits = TabBloxFruits:AddSection({
+    Name = "Blox Fruits Scripts"
+})
+
+-- Add Blox Fruits scripts
+TabBloxFruits:AddButton({
+    Name = "Auto Farm Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Blox-Fruits-Script/main/AutoFarm.lua"))()
+        print("Auto Farm script pressed")
+    end
+})
+
+TabBloxFruits:AddButton({
+    Name = "Teleport Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Blox-Fruits-Script/main/Teleport.lua"))()
+        print("Teleport script pressed")
+    end
+})
+
+TabBloxFruits:AddButton({
+    Name = "Devil Fruits Unlocker",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Blox-Fruits-Script/main/DevilFruitUnlocker.lua"))()
+        print("Devil Fruits Unlocker script pressed")
+    end
+})
+
+-- Blade Ball Tab
+local TabBladeBall = Window:MakeTab({
+    Name = "Blade Ball",
+    Icon = "https://img.icons8.com/plasticine/2x/basketball-player.png",
+    PremiumOnly = false
+})
+
+local SectionBladeBall = TabBladeBall:AddSection({
+    Name = "Blade Ball Scripts"
+})
+
+-- Add Blade Ball scripts
+TabBladeBall:AddButton({
+    Name = "Speed Hack",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Blade-Ball-Script/main/SpeedHack.lua"))()
+        print("Speed Hack script pressed")
+    end
+})
+
+TabBladeBall:AddButton({
+    Name = "Auto Farm",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Blade-Ball-Script/main/AutoFarm.lua"))()
+        print("Auto Farm script pressed")
+    end
+})
+
+TabBladeBall:AddButton({
+    Name = "Unlock All Characters",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Blade-Ball-Script/main/UnlockAllCharacters.lua"))()
+        print("Unlock All Characters script pressed")
+    end
+})
+
+-- Strangest Battleground Tab
+local TabStrangestBattleground = Window:MakeTab({
+    Name = "Strangest Battleground",
+    Icon = "https://img.icons8.com/plasticine/2x/battle.png",
+    PremiumOnly = false
+})
+
+local SectionStrangestBattleground = TabStrangestBattleground:AddSection({
+    Name = "Strangest Battleground Scripts"
+})
+
+-- Add Strangest Battleground scripts
+TabStrangestBattleground:AddButton({
+    Name = "ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Strangest-Battleground-Script/main/ESP.lua"))()
+        print("ESP script pressed")
+    end
+})
+
+TabStrangestBattleground:AddButton({
+    Name = "Aimbot",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Strangest-Battleground-Script/main/Aimbot.lua"))()
+        print("Aimbot script pressed")
+    end
+})
+
+TabStrangestBattleground:AddButton({
+    Name = "No Recoil",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Strangest-Battleground-Script/main/NoRecoil.lua"))()
+        print("No Recoil script pressed")
+    end
+})
+
+-- Murder Mystery 2 Tab
+local TabMM2 = Window:MakeTab({
+    Name = "Murder Mystery 2",
+    Icon = "https://img.icons8.com/plasticine/2x/mystery.png",
+    PremiumOnly = false
+})
+
+local SectionMM2 = TabMM2:AddSection({
+    Name = "Murder Mystery 2 Scripts"
+})
+
+-- Add Murder Mystery 2 scripts
+TabMM2:AddButton({
+    Name = "ESP",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Murder-Mystery-2-Script/main/ESP.lua"))()
+        print("ESP script pressed")
+    end
+})
+
+TabMM2:AddButton({
+    Name = "Fly Hack",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Murder-Mystery-2-Script/main/FlyHack.lua"))()
+        print("Fly Hack script pressed")
+    end
+})
+
+TabMM2:AddButton({
+    Name = "Unlock All Skins",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Synthetic6969/Murder-Mystery-2-Script/main/UnlockAllSkins.lua"))()
+        print("Unlock All Skins script pressed")
+    end
+})
+
+OrionLib:Init()
