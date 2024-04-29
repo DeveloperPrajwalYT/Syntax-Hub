@@ -1,0 +1,71 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "SyntaXDeath", HidePremium = false,IntroText = "SyntaXDeath Scripts Hub V2", SaveConfig = true, ConfigFolder = "Scripts"})
+
+local Tab = Window:MakeTab({
+	Name = "Blox Fruits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+OrionLib:MakeNotification({
+	Name = "HEY",
+	Content = "linktr.ee/codeweb.com !",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+local Section = Tab:AddSection({
+	Name = "Blox Fruits Scripts"
+})
+
+Tab:AddButton({
+	Name = "RedZ",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+      		print("button pressed")
+  	end    
+})
+
+-- Add more Blox Fruits scripts here
+Tab:AddButton({
+	Name = "Devil Fruits Unlocker",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnoyingNoobs/AnnoyingHub/main/Blox-Fruits"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Farm Script",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Arxnium/ArsenalHub/main/Blox-Fruits"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Teleport Script",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/DogeKingK/Ez-Hub/main/Blox%20Fruits"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "God Mode Script",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/BigBootyMami/BloodFruits/main/BloodFruits.lua"))()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Fruit Sniper Script",
+	Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/AverieH/Script/main/Blox%20Fruits%20Sniper"))()
+      		print("button pressed")
+  	end    
+})
+-- End of additional scripts
+
+OrionLib:Init()
